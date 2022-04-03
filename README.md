@@ -1,4 +1,4 @@
-# Sky-shop project
+# JSON project
 >The project based on converting JSON data to a HTML using plain JavaScript.
 
 ## Installation
