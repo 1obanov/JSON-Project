@@ -1,0 +1,30 @@
+.switch-layout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+
+    @include media("<md-phone") {
+        display: none;
+    }
+
+    li {
+        a {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            img {
+                max-width: 20px;
+            }
+        }
+
+        &.active {
+            a {
+                opacity: 1;
+            }
+        }
+    }
+}

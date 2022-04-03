@@ -1,0 +1,29 @@
+@import "vendors/include-media";
+@import "base/variables";
+
+:root {
+	--rem-base: 10px;
+	--font-size-base: 16px;
+	--line-height-base: 1.2;
+	--vertical-rhythm: calc(var(--line-height-base) * 1em);
+	--animation-duration: 0.3s;
+	--animation-timing-function: ease;
+	--gutter: #{$gutter};
+
+	@each $name,
+	$array in $headings {
+		@if ($name=="default") {
+			@for $i from 1 through length($array) {
+				--h#{$i}: #{nth($array, $i)};
+			}
+		}
+
+		@else {
+			@include media("<=#{$name}") {
+				@for $i from 1 through length($array) {
+					--h#{$i}: #{nth($array, $i)};
+				}
+			}
+		}
+	}
+}

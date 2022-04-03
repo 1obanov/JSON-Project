@@ -1,0 +1,42 @@
+.filter-box {
+    max-width: max-content;
+    position: relative;
+    background: $light-gray;
+
+    @include media("<md-phone") {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        background-image: url('../img/ico-arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    select {
+        padding: 10px 15px;
+        background: transparent;
+        border: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        outline: none;
+        min-width: 200px;
+        position: relative;
+        z-index: 1;
+
+        @include media("<md-phone") {
+            width: 100%;
+        }
+    }
+}

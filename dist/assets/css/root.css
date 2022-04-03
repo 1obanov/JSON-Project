@@ -1,0 +1,26 @@
+:root {
+	--rem-base:10px;
+	--font-size-base:16px;
+	--line-height-base:1.2;
+	--vertical-rhythm:calc(var(--line-height-base) * 1em);
+	--animation-duration:.3s;
+	--animation-timing-function:ease;
+	--gutter:20px;
+	--h1:3.5rem;
+	--h2:2.8rem;
+	--h3:2.2rem;
+	--h4:2rem;
+	--h5:17px;
+	--h6:16px;
+}
+
+@media (max-width:768px) {
+	:root {
+		--h1:25px;
+		--h2:23px;
+		--h3:20px;
+		--h4:18px;
+		--h5:17px;
+		--h6:16px;
+	}
+}
